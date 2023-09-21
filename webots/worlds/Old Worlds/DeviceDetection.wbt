@@ -1,0 +1,98 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "../protos/E-puck.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation 0.23411647346505368 0.25828192934757366 -0.9372725973935127 1.5373386029938165
+  position 0.056850416443578536 0.42090776890656983 0.43182493731301397
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  translation 0.00574224 -0.220159 -0.02
+  floorTileSize 0.25 0.25
+}
+E-puck {
+  translation 0.0222908 -0.075071 -0.020064
+  rotation -3.58268e-09 7.52307e-10 -1 1.0472
+  controller "e_puck"
+  camera_fieldOfView 0.784
+  camera_width 1920
+  camera_height 1080
+}
+Transform {
+  translation 0.13902 -0.300784 0.00999889
+  rotation 0.18616499041046944 -0.6947439916539653 -0.6947469916496112 2.7735
+  scale 0.01 0.01 0.01
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+        }
+        texture ImageTexture {
+          url [
+            "../../../Downloads/mm_frame.png"
+          ]
+        }
+      }
+      geometry Mesh {
+        url [
+          "../../../Downloads/mm_frame.obj"
+        ]
+      }
+    }
+  ]
+}
+Transform {
+  translation -0.0774845 -0.425784 0.0099946
+  rotation 0.18616499041046944 -0.6947439916539653 -0.6947469916496112 2.7735
+  scale 0.01 0.01 0.01
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+        }
+        texture ImageTexture {
+          url [
+            "../../../Downloads/mm_frame.png"
+          ]
+        }
+      }
+      geometry Mesh {
+        url [
+          "../../../Downloads/mm_frame.obj"
+        ]
+      }
+    }
+  ]
+}
+Transform {
+  translation 0.0350982 -0.360784 0.00999681
+  rotation 0.18616499041046944 -0.6947439916539653 -0.6947469916496112 2.7735
+  scale 0.01 0.01 0.01
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+        }
+        texture ImageTexture {
+          url [
+            "../../../Downloads/mm_frame.png"
+          ]
+        }
+      }
+      geometry Mesh {
+        url [
+          "../../../Downloads/mm_frame.obj"
+        ]
+      }
+    }
+  ]
+}

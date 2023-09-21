@@ -1,0 +1,318 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/RectangleArena.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.2312094868874232 -0.6551571041450264 0.7192435902123546 5.370895630139187
+  position -2.0813036284046635 1.4417858652763074 2.0564571420151565
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 2 2
+}
+Robot {
+  translation -0.622633 -0.747859 0.039721
+  rotation 0.18214943086006297 0.6952772920368745 0.6952776941735052 2.781247008309733
+  children [
+    SliderJoint {
+      jointParameters JointParameters {
+        axis 0 1 0
+      }
+      device [
+        LinearMotor {
+          name "linear"
+          maxPosition 0.2
+        }
+      ]
+      endPoint Solid {
+        translation -0.085 0.05 0
+        rotation 0 -1 0 -5.307179586466759e-06
+        children [
+          HingeJoint {
+            jointParameters HingeJointParameters {
+              axis 0 1 0
+              anchor -0.075 1 0
+            }
+            device [
+              RotationalMotor {
+                name "RM"
+              }
+            ]
+            endPoint Solid {
+              translation -0.08 0 -4.07847e-08
+              rotation 0 1 0 1.5708
+              children [
+                Camera {
+                  translation 0 -7.96327e-06 0.01
+                  rotation -0.5771968951617173 0.5771968951617173 0.577656895078166 2.09394
+                  name "CAM"
+                  fieldOfView 0.6
+                  width 1920
+                  height 1080
+                  recognition Recognition {
+                    frameThickness 4
+                  }
+                }
+                Shape {
+                  appearance PBRAppearance {
+                  }
+                  geometry Cylinder {
+                    height 0.02
+                    radius 0.01
+                  }
+                }
+              ]
+            }
+          }
+          Shape {
+            appearance PBRAppearance {
+            }
+            geometry Box {
+              size 0.15 0.02 0.02
+            }
+          }
+        ]
+        name "solid(5)"
+      }
+    }
+    Solid {
+      translation 0 0.15 0
+      children [
+        Shape {
+          appearance PBRAppearance {
+          }
+          geometry Box {
+            size 0.02 0.25 0.02
+          }
+        }
+      ]
+      name "solid(4)"
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position 65.83907830290647
+        anchor 0.06 0 0.05
+      }
+      device [
+        RotationalMotor {
+          name "wheel1"
+        }
+      ]
+      endPoint Solid {
+        translation 0.06 2.170527047681154e-08 0.04999999706584393
+        rotation 0.7065896218819263 0.047505015360694326 0.7060271806129962 3.0465781467907243
+        children [
+          DEF Wheel Shape {
+            appearance PBRAppearance {
+              baseColor 1 0 0
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.02
+              radius 0.04
+            }
+          }
+        ]
+        boundingObject USE Wheel
+        physics DEF Physics_wh Physics {
+        }
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position 65.83907972640932
+        anchor 0.06 0 -0.05
+      }
+      device [
+        RotationalMotor {
+          name "wheel2"
+        }
+      ]
+      endPoint Solid {
+        translation 0.060000000000000164 6.305105123749324e-17 -0.04999999999999953
+        rotation 0.706589644165159 0.047504517405726136 0.7060271918167197 3.046579472643612
+        children [
+          DEF Wheel Shape {
+            appearance PBRAppearance {
+              baseColor 1 0 0
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.02
+              radius 0.04
+            }
+          }
+        ]
+        name "solid(1)"
+        boundingObject USE Wheel
+        physics DEF Physics_wh Physics {
+        }
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position 65.83907825116366
+        anchor -0.06 0 0.05
+      }
+      device [
+        RotationalMotor {
+          name "wheel3"
+        }
+      ]
+      endPoint Solid {
+        translation -0.06000000000000015 -5.818685493843806e-17 0.049999999999999614
+        rotation 0.7065896266052564 0.04750503936462152 0.7060271742707999 3.0465784302503143
+        children [
+          DEF Wheel Shape {
+            appearance PBRAppearance {
+              baseColor 1 0 0
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.02
+              radius 0.04
+            }
+          }
+        ]
+        name "solid(2)"
+        boundingObject USE Wheel
+        physics DEF Physics_wh Physics {
+        }
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position 65.83907973614623
+        anchor -0.06 0 -0.05
+      }
+      device [
+        RotationalMotor {
+          name "wheel4"
+        }
+      ]
+      endPoint Solid {
+        translation -0.060000000000000164 6.34564554169002e-17 -0.049999999999999524
+        rotation 0.7065896442810569 0.04750451396069654 0.7060271919325258 3.046579479523611
+        children [
+          DEF Wheel Shape {
+            appearance PBRAppearance {
+              baseColor 1 0 0
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.02
+              radius 0.04
+            }
+          }
+        ]
+        name "solid(3)"
+        boundingObject USE Wheel
+        physics DEF Physics_wh Physics {
+        }
+      }
+    }
+    DEF Body Shape {
+      appearance PBRAppearance {
+        baseColor 0 1 0
+        metalness 0
+      }
+      geometry Box {
+        size 0.1 0.05 0.2
+      }
+    }
+  ]
+  boundingObject USE Body
+  physics Physics {
+  }
+  controller "device_detection"
+}
+Solid {
+  translation 0.605297 -0.41804 0.019998
+  rotation -0.37796500919324305 0.6546520159231012 0.6546550159231742 -2.4188553071795864
+  children [
+    Transform {
+      translation 0 0.06 0
+      scale 0.03 0.03 0.005
+      children [
+        CadShape {
+          url [
+            "../../../Downloads/mm_frame.obj"
+          ]
+        }
+      ]
+    }
+  ]
+  model "phone"
+  recognitionColors [
+    1 0 0
+  ]
+}
+Solid {
+  children [
+    Transform {
+      translation 0.89712 0.0410458 0.079998
+      rotation -0.37796476175773586 0.6546525873532921 0.6546545873520314 -2.4188553071795864
+      scale 0.035 0.035 0.01
+      children [
+        Shape {
+          appearance Appearance {
+            material Material {
+            }
+            texture ImageTexture {
+              url [
+                "../../../Downloads/mm_frame (2).png"
+              ]
+            }
+          }
+          geometry Mesh {
+            url [
+              "../../../Downloads/mm_frame (2).obj"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+  name "solid(1)"
+  recognitionColors [
+    1 0 0
+  ]
+}
+Solid {
+  children [
+    Transform {
+      translation 0.35212 -0.902908 0.079998
+      rotation -0.37796476175773586 0.6546525873532921 0.6546545873520314 -2.4188553071795864
+      scale 0.031 0.03 0.01
+      children [
+        Shape {
+          appearance Appearance {
+            material Material {
+            }
+            texture ImageTexture {
+              url [
+                "../../../Downloads/mm_frame (4).png"
+              ]
+            }
+          }
+          geometry Mesh {
+            url [
+              "../../../Downloads/mm_frame (5).obj"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+  name "solid(2)"
+  recognitionColors [
+    1 0 0
+  ]
+}
