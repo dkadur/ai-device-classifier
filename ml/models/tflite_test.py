@@ -35,8 +35,8 @@ pred = np.squeeze(output_data)
 
 class_ind = {
     0: "iPhone 6",
-    1: "iPhone 6",
-    2: "iPhone 13",
+    1: "iPhone 8",
+    2: "iPhone X",
     3: "iPhone 13"
 }
 
